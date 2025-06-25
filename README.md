@@ -44,7 +44,7 @@ streamlit run app.py
 
 The app will open in your browser at `http://localhost:8501`.
 
-Explore the sample app with preloaded users (`Alice`, `Bob`, `Charlie`). Try adding, editing, deleting users, and transferring age.
+Explore the sample app with preloaded users (`Alice`, `Bob`, `Charlie`). Try adding, editing, deleting users.
 
 ---
 
@@ -69,7 +69,6 @@ Explore the sample app with preloaded users (`Alice`, `Bob`, `Charlie`). Try add
 - A sample SQLite DB (`database.sqlite`)
 - Features:
   - Add, edit, delete users
-  - Transfer age between users (see Step 5)
 
 ---
 
@@ -80,45 +79,14 @@ Open your deployed app in the browser and try the following:
 - Add a new user
 - Edit an existing user's name or age
 - Delete someone from the list
-- Use **"Transfer Age Between Users"** to shift age values around
 
 This gives you a feel for how the app works before using your own data.
 
 ---
 
-### ⚙️ Step 4: Update Config for Your Own Table
+### 🔁 Step 4: Test the "Transfer Age" Transaction
 
-When you're ready to use your own database:
-
-1. Open `config.py` and update:
-   - `DB_PATH` to your new `.sqlite` file name
-   - `TABLE_NAME` to match your own table
-   - `COLUMNS` with the field names (excluding `id`)
-
-2. Replace `database.sqlite` with your exported version.
-
----
-
-### 🔄 Step 5: Export Your MySQL DB to SQLite
-
-Use a tool like DB Browser for SQLite, or try this approach:
-
-```bash
-# Export MySQL to SQL
-mysqldump -u your_user -p your_db > dump.sql
-
-# Convert SQL to SQLite (optional method)
-pip install sqlite-utils
-sqlite-utils convert dump.sql database.sqlite
-```
-
-Once your new `.sqlite` file is in place, commit the change to GitHub — your deployed app will automatically update.
-
----
-
-### 🔁 Step 6: Test the "Transfer Age" Transaction
-
-Once your app is running, scroll to the section titled:
+After customizing your app with your own database and deploying it, scroll to the section titled:
 
 > **"Transfer Age Between Users (Transactional)"**
 
@@ -136,6 +104,36 @@ Once your app is running, scroll to the section titled:
 - If the **"from" user** doesn’t have enough age, the transaction fails.
 - Selecting the same user for both fields is prevented.
 - Errors are displayed clearly, and the DB rolls back automatically.
+
+---
+
+### ⚙️ Step 5: Update Config for Your Own Table
+
+When you're ready to use your own database:
+
+1. Open `config.py` and update:
+   - `DB_PATH` to your new `.sqlite` file name
+   - `TABLE_NAME` to match your own table
+   - `COLUMNS` with the field names (excluding `id`)
+
+2. Replace `database.sqlite` with your exported version.
+
+---
+
+### 🔄 Step 6: Export Your MySQL DB to SQLite
+
+Use a tool like DB Browser for SQLite, or try this approach:
+
+```bash
+# Export MySQL to SQL
+mysqldump -u your_user -p your_db > dump.sql
+
+# Convert SQL to SQLite (optional method)
+pip install sqlite-utils
+sqlite-utils convert dump.sql database.sqlite
+```
+
+Once your new `.sqlite` file is in place, commit the change to GitHub — your deployed app will automatically update.
 
 ---
 
