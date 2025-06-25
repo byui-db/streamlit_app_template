@@ -13,10 +13,11 @@ It uses a **SQLite database** and is designed for **educational use**, ideal for
 
 ```
 .
-├── app.py               # Main Streamlit app
-├── config.py            # Database/table/column settings
-├── requirements.txt     # For deployment
-├── database.sqlite      # Sample SQLite database
+├── streamlit_app.py      ✅ Main app (auto-detected by Streamlit Cloud)
+├── config.py             ✅ Table & DB settings
+├── database.sqlite       ✅ Sample database
+├── requirements.txt      ✅ Dependencies
+└── README.md             ✅ Updated with correct filename
 ```
 
 ---
