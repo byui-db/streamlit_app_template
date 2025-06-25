@@ -1,10 +1,11 @@
-🔧 Streamlit CRUD App (SQLite Version)
+# 🔧 Streamlit CRUD App (SQLite Version)
 
-This is a simple, fully functional Streamlit web app for performing:
-	•	CRUD operations (Create, Read, Update, Delete)
-	•	A real-world SQL transaction: transferring values between rows using safe, rollback-enabled logic
+This is a simple, fully functional **Streamlit web app** for performing:
 
-It uses a SQLite database and is designed for educational use, ideal for learning database logic and deploying on Streamlit Community Cloud.
+- **CRUD operations** (Create, Read, Update, Delete)
+- A real-world **SQL transaction**: transferring values between rows using safe, rollback-enabled logic
+
+It uses a **SQLite database** and is designed for **educational use**, ideal for learning database logic and deploying on **Streamlit Community Cloud**.
 
 ---
 
@@ -49,19 +50,26 @@ Explore the sample app with preloaded users (`Alice`, `Bob`, `Charlie`). Try add
 
 ### ☁️ Step 2: Deploy the Working Example to the Cloud
 
-After running locally and confirming it works:
+#### First, Make It Your Own:
 
-1. Push your copy of this repo to GitHub
-2. Visit: [https://streamlit.io/cloud](https://streamlit.io/cloud)
-3. Log in and click **"New app"**
-4. Connect your GitHub repo
-5. Click **Deploy**
+1. Click the **"Use this template"** button on GitHub (top right)
+2. Create a copy of the repo under:
+   - Your **personal GitHub account** or
+   - A **school/org-owned GitHub org**
+3. Once your copy is created, clone it to your local machine if needed
+
+#### Then Deploy:
+
+1. Visit: [https://streamlit.io/cloud](https://streamlit.io/cloud)
+2. Log in and click **"New app"**
+3. Connect your newly created GitHub repo
+4. Select the main branch and click **Deploy**
 
 🎉 You now have a live CRUD app running with:
 - A sample SQLite DB (`database.sqlite`)
 - Features:
   - Add, edit, delete users
-  - Transfer age between users (see Step 4)
+  - Transfer age between users (see Step 5)
 
 ---
 
